@@ -1,3 +1,18 @@
+// ============================
+// Giới hạn thời gian sử dụng
+// ============================
+const expirationDate = new Date("2025-05-16T00:00:00Z"); // Thời gian hết hạn (UTC)
+const currentDate = new Date();
+
+if (currentDate > expirationDate) {
+  $done({
+    body: JSON.stringify({
+      message: "❌ License đã hết hạn. Vui lòng liên hệ admin để gia hạn."
+    })
+  });
+  console.log("❌ License hết hạn vào " + expirationDate.toISOString());
+  $done(); // Kết thúc script sớm
+} 
 const mapping = {
   '%E8%BD%A6%E7%A5%A8%E7%A5%A8': ['vip+watch_vip'],
   'Locket': ['Gold']
