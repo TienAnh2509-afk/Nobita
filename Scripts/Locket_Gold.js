@@ -1,7 +1,7 @@
 // ============================
 // Giới hạn thời gian sử dụng
 // ============================
-const expirationDate = new Date("2025-05-16T00:00:00Z"); // Thời gian hết hạn (UTC)
+const expirationDate = new Date("2025-05-56T012:00:00Z"); // Thời gian hết hạn (UTC)
 const currentDate = new Date();
 
 if (currentDate > expirationDate) {
